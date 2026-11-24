@@ -23,3 +23,9 @@ This portfolio demo uses fictional data. The hosted Python service runs on Rende
 ## Retrieval Evaluation Lab
 
 [Launch the evaluation lab](https://sainikhilhampanoor-0210.github.io/document-qa-demo/retrieval-lab/) · [Read the evaluator](retrieval-lab/engine.mjs). Run the regression suite with `node retrieval-lab/test.mjs`.
+
+## RAG Context Budget Planner
+
+Choose a context budget and compare greedy packing with an exact optimizer. Each fictional passage has an estimated token cost and a relevance score. Edit those estimates to explore the trade-off.
+
+[Open project](https://sainikhilhampanoor-0210.github.io/document-qa-demo/context-budget/) · [Source](context-budget/engine.mjs). Test locally with `node context-budget/test.mjs`.
