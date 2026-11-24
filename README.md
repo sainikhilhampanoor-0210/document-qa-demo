@@ -19,3 +19,7 @@ Ask `What is the return policy?` to see the answer alongside the passage it came
 Follow the [FastAPI and Docker instructions](BACKEND.md). For the standalone browser version, run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000`.
 
 This portfolio demo uses fictional data. The hosted Python service runs on Render’s free tier and may take a moment to wake up.
+
+## Retrieval Evaluation Lab
+
+[Launch the evaluation lab](https://sainikhilhampanoor-0210.github.io/document-qa-demo/retrieval-lab/) · [Read the evaluator](retrieval-lab/engine.mjs). Run the regression suite with `node retrieval-lab/test.mjs`.

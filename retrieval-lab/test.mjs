@@ -1,0 +1,1 @@
+import {rank,evaluate,cases} from "./engine.mjs";import assert from "node:assert/strict";assert.deepEqual(rank("zyx"),[]);assert.equal(rank("forgot login credentials",true)[0],"access");assert.equal(evaluate([["zyx","access"]],1,false).hit,0);assert.ok(evaluate(cases,2,true).mrr>evaluate(cases,2,false).mrr);

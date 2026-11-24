@@ -1,0 +1,4 @@
+import {cases,corpus,evaluate} from "./engine.mjs";import {select,example,run,section,line,table} from "./ui.mjs";
+example.value=JSON.stringify(cases,null,2);
+run(()=>{const qs=JSON.parse(example.value);if(!Array.isArray(qs)||!qs.length||qs.length>100||qs.some(x=>!Array.isArray(x)||x.length!==2||typeof x[0]!=="string"||!x[0].trim()||!corpus.some(c=>c[0]===x[1])))throw Error("Use 1–100 [question, source ID] pairs. Source IDs: "+corpus.map(c=>c[0]).join(", "));
+for(const expanded of [false,true]){const result=evaluate(qs,Number(select.value),expanded);section(expanded?"Vocabulary expansion":"Lexical baseline");line("Hit rate "+(100*result.hit).toFixed(0)+"% · MRR "+result.mrr.toFixed(2));table(["Question","Expected","Retrieved","Rank"],result.rows.map(r=>[r.q,r.gold,r.found.join(", ")||"No match",r.position||"Miss"]));}section("Reference passages");table(["Source","Passage"],corpus);});
